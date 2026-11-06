@@ -1,1 +1,5 @@
-{}
+{
+    "module_name": "Yireo_CacheDebugger",
+    "composer_name": "yireo/module-cache-debugger",
+    "sequence": []
+}
