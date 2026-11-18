@@ -1,5 +1,7 @@
 {
     "module_name": "Yireo_CacheDebugger",
     "composer_name": "yireo/module-cache-debugger",
-    "sequence": []
+    "sequence": [],
+    "phpcs_severity": "7",
+    "phpstan_level": "1"
 }
