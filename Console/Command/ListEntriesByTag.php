@@ -2,11 +2,11 @@
 
 namespace Yireo\CacheDebugger\Console\Command;
 
-use Composer\Console\Input\InputOption;
 use Magento\Framework\App\Cache;
 use Magento\Framework\App\Cache\Manager;
 use Magento\Framework\Cache\ConfigInterface;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -16,7 +16,7 @@ class ListEntriesByTag extends Command
 
     public function __construct(
         Cache $cache,
-        string $name = null)
+        ?string $name = null)
     {
         parent::__construct($name);
         $this->cache = $cache;
@@ -29,7 +29,7 @@ class ListEntriesByTag extends Command
     {
         $this->setName('cache:debug:list-by-tag');
         $this->setDescription('List caching entries by tag');
-        $this->addArgument('tag', InputOption::VALUE_REQUIRED, 'Cache tag');
+        $this->addArgument('tag', InputArgument::REQUIRED, 'Cache tag');
         parent::configure();
     }
 
