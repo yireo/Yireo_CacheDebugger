@@ -10,4 +10,10 @@
             </argument>
         </arguments>
     </type>
+
+    <type name="Yireo\CacheDebugger\Console\Command\ListEntriesByTag">
+        <arguments>
+            <argument name="cache" xsi:type="object">Magento\Framework\App\Cache\Proxy</argument>
+        </arguments>
+    </type>
 </config>
